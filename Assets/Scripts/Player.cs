@@ -14,8 +14,7 @@ public class PlayerMovement : MonoBehaviour
     //Player movement
     private Vector2 movementInput;
 
-    //player animations
-    public Animator anim;
+
 
     //coin collecting
     public int CoinCount;
@@ -26,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
     //for Shells
     public GameObject ShellPrefab;
     public Transform ShellSpawnPoints;
+    public Transform ShellSpawnPoints2;
     public float ShellSpeed;
 
 
@@ -34,21 +34,22 @@ public class PlayerMovement : MonoBehaviour
     {
         //para sa player to pre kimi lang
         rigidBody = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
+
     }
 
     // PLAY/LAUNCH
     void Update()
     {
-        anim.SetFloat("Horizontal", movementInput.x);
-        anim.SetFloat("Vertical", movementInput.y);
-        anim.SetFloat("Speed", movementInput.sqrMagnitude);
+       
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            GameObject Shell = Instantiate(ShellPrefab, ShellSpawnPoints);
+            GameObject Shell = Instantiate(ShellPrefab, ShellSpawnPoints.position,Quaternion.identity);
+            GameObject Shell2 = Instantiate(ShellPrefab, ShellSpawnPoints2.position, Quaternion.identity);
             Rigidbody2D rb = Shell.GetComponent<Rigidbody2D>();
+            Rigidbody2D rb2 = Shell2.GetComponent<Rigidbody2D>();
             rb.velocity = transform.up * ShellSpeed;
+            rb2.velocity = transform.up * ShellSpeed;
         }
     }
     //Fixed for physx kimi lang pre
