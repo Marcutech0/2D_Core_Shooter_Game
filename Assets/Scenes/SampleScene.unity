@@ -336,7 +336,6 @@ Transform:
   - {fileID: 519420032}
   - {fileID: 182972559}
   - {fileID: 1061419763}
-  - {fileID: 393396487}
   m_Father: {fileID: 871351416}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -411,64 +410,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   rigidBody: {fileID: 201128737}
-  anim: {fileID: 0}
   CoinCount: 0
   HealthPoints: 0
-  ShellPrefab: {fileID: 0}
-  ShellSpawnPoints: {fileID: 0}
-  ShellSpeed: 0
---- !u!1 &393396486
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 393396487}
-  - component: {fileID: 393396488}
-  m_Layer: 0
-  m_Name: Shellspwn
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &393396487
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 393396486}
-  m_LocalRotation: {x: -0, y: 0, z: -0.9999987, w: -0.001628371}
-  m_LocalPosition: {x: -0.035264805, y: -0.3624967, z: 0.003571921}
-  m_LocalScale: {x: 0.21430014, y: 0.21427593, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 8293348513313712686}
-  m_Father: {fileID: 201128736}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &393396488
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 393396486}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac992171d0a3d4c4eae42a266c26e0d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 0
-  rigidBody: {fileID: 8293348513313712688}
-  anim: {fileID: 0}
-  CoinCount: 0
-  HealthPoints: 0
-  ShellPrefab: {fileID: 2108633531}
-  ShellSpawnPoints: {fileID: 393396487}
+  ShellPrefab: {fileID: 1967920846}
+  ShellSpawnPoints: {fileID: 1061419763}
   ShellSpeed: 50
 --- !u!1 &519420028
 GameObject:
@@ -605,7 +550,7 @@ GameObject:
   - component: {fileID: 1061419763}
   - component: {fileID: 1061419764}
   m_Layer: 0
-  m_Name: Shellspwn
+  m_Name: Shellspawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -641,7 +586,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 0
   rigidBody: {fileID: 1967920850}
-  anim: {fileID: 0}
   CoinCount: 0
   HealthPoints: 0
   ShellPrefab: {fileID: 1967920846}
@@ -658,6 +602,10 @@ PrefabInstance:
     - target: {fileID: 1303398679033453377, guid: aed921630a86f2545b06cd0d34620c0f, type: 3}
       propertyPath: m_Name
       value: Exhaust_Fire
+      objectReference: {fileID: 0}
+    - target: {fileID: 1303398679033453377, guid: aed921630a86f2545b06cd0d34620c0f, type: 3}
+      propertyPath: m_TagString
+      value: Shell
       objectReference: {fileID: 0}
     - target: {fileID: 5867526639831967643, guid: aed921630a86f2545b06cd0d34620c0f, type: 3}
       propertyPath: m_SortingOrder
@@ -747,125 +695,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 0
   rigidBody: {fileID: 1967920850}
-  anim: {fileID: 0}
   CoinCount: 0
   HealthPoints: 0
   ShellPrefab: {fileID: 1967920846}
   ShellSpawnPoints: {fileID: 1061419763}
-  ShellSpeed: 50
+  ShellSpeed: 100
 --- !u!50 &1967920850 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 1395208549150878298, guid: aed921630a86f2545b06cd0d34620c0f, type: 3}
   m_PrefabInstance: {fileID: 1492279068}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2108633531 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1303398679033453377, guid: aed921630a86f2545b06cd0d34620c0f, type: 3}
-  m_PrefabInstance: {fileID: 8293348513313712685}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &8293348513313712685
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 393396487}
-    m_Modifications:
-    - target: {fileID: 1303398679033453377, guid: aed921630a86f2545b06cd0d34620c0f, type: 3}
-      propertyPath: m_Name
-      value: Exhaust_Fire
-      objectReference: {fileID: 0}
-    - target: {fileID: 5867526639831967643, guid: aed921630a86f2545b06cd0d34620c0f, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8618260725800660902, guid: aed921630a86f2545b06cd0d34620c0f, type: 3}
-      propertyPath: m_RootOrder
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8618260725800660902, guid: aed921630a86f2545b06cd0d34620c0f, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8618260725800660902, guid: aed921630a86f2545b06cd0d34620c0f, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8618260725800660902, guid: aed921630a86f2545b06cd0d34620c0f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 8618260725800660902, guid: aed921630a86f2545b06cd0d34620c0f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.03
-      objectReference: {fileID: 0}
-    - target: {fileID: 8618260725800660902, guid: aed921630a86f2545b06cd0d34620c0f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.003571921
-      objectReference: {fileID: 0}
-    - target: {fileID: 8618260725800660902, guid: aed921630a86f2545b06cd0d34620c0f, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8618260725800660902, guid: aed921630a86f2545b06cd0d34620c0f, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8618260725800660902, guid: aed921630a86f2545b06cd0d34620c0f, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8618260725800660902, guid: aed921630a86f2545b06cd0d34620c0f, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8618260725800660902, guid: aed921630a86f2545b06cd0d34620c0f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8618260725800660902, guid: aed921630a86f2545b06cd0d34620c0f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8618260725800660902, guid: aed921630a86f2545b06cd0d34620c0f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1303398679033453377, guid: aed921630a86f2545b06cd0d34620c0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8293348513313712690}
-  m_SourcePrefab: {fileID: 100100000, guid: aed921630a86f2545b06cd0d34620c0f, type: 3}
---- !u!4 &8293348513313712686 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8618260725800660902, guid: aed921630a86f2545b06cd0d34620c0f, type: 3}
-  m_PrefabInstance: {fileID: 8293348513313712685}
-  m_PrefabAsset: {fileID: 0}
---- !u!50 &8293348513313712688 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 1395208549150878298, guid: aed921630a86f2545b06cd0d34620c0f, type: 3}
-  m_PrefabInstance: {fileID: 8293348513313712685}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &8293348513313712690
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2108633531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac992171d0a3d4c4eae42a266c26e0d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 0
-  rigidBody: {fileID: 8293348513313712688}
-  anim: {fileID: 0}
-  CoinCount: 0
-  HealthPoints: 0
-  ShellPrefab: {fileID: 2108633531}
-  ShellSpawnPoints: {fileID: 393396487}
-  ShellSpeed: 50
